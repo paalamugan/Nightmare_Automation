@@ -1,8 +1,8 @@
-var express = require('express');
-var bodyparser=require('body-parser');
-var cors=require('cors');
+const express = require('express');
+const bodyparser=require('body-parser');
+const cors=require('cors');
 const Nightmare = require('nightmare')
-var app = express();
+const app = express();
 app.use(cors({ origin: 'http://localhost:4200' }));
 
 
@@ -20,7 +20,7 @@ res.send("hello");
 
 
 app.post('/',(req,res) =>{
-    var description=req.body.description;
+    const description=req.body.description;
     const nightmare = Nightmare({ show: true })
 
     nightmare
